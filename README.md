@@ -3,7 +3,7 @@
 Xin Meta is an open-access psychology educational platform.  
 Our goal is to make **modern moral, social, and emotional psychology** accessible to learners around the world.  
 
-The site is bilingual-friendly and designed for multilingual expansion, with lessons in **English, German, Japanese**, and other languages planned.
+The site is bilingual-friendly and designed for multilingual expansion, with lessons in **Russian, German, Japanese**, and other languages planned.
 
 ---
 
