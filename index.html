@@ -3,144 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Xin Meta — 心美塔</title>
-
-  <!-- === Fonts === -->
-  <style>
-    @font-face {
-      font-family: "Judou Sans Hans";
-      src: url("fonts/JudouSansHans-Regular.woff2") format("woff2");
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: "Judou Sans Hans";
-      src: url("fonts/JudouSansHans-Medium.woff2") format("woff2");
-      font-weight: 500;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: "Judou Sans Hans";
-      src: url("fonts/JudouSansHans-Bold.woff2") format("woff2");
-      font-weight: 700;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    body {
-      font-family: "Judou Sans Hans", sans-serif;
-      margin: 0;
-      background: #fafafa;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #8050A0; /* violet */
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-
-    header h1 {
-      margin: 0;
-      font-weight: 700;
-      font-size: 2.5rem;
-    }
-
-    header p {
-      margin: 0.5rem 0 0;
-      font-weight: 400;
-    }
-
-    nav {
-      background: white;
-      border-bottom: 1px solid #ddd;
-      padding: 0.75rem 1rem;
-      text-align: center;
-    }
-
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #8050A0;
-      font-weight: 500;
-      font-size: 1.1rem;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    .container h2 {
-      color: #8050A0;
-      margin-top: 2rem;
-    }
-
-    .container ul {
-      list-style-type: disc;
-      padding-left: 1.5rem;
-    }
-
-    .container a {
-      color: #8050A0;
-      text-decoration: none;
-    }
-
-    .container a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      margin-top: 4rem;
-      text-align: center;
-      padding: 2rem;
-      color: #666;
-      font-size: 0.9rem;
-      border-top: 1px solid #ddd;
-    }
-  </style>
+  <title>Xin Meta Online</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <header>
-    <h1>Xin Meta 心美塔</h1>
-    <p>Open-access psychological education</p>
-  </header>
+<header class="banner">
+  <h1>Xin Meta Online</h1>
+  <p>Your psychology knowledge center — multilingual, accessible, research-friendly.</p>
+</header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="lesson-1.html">Lesson 1</a>
-  </nav>
+<main>
 
-  <div class="container">
+  <section class="card">
     <h2>Welcome</h2>
     <p>
-      Xin Meta 心美塔 publishes accessible psychological lessons inspired by classical and modern research.
-      Lessons focus on <strong>emotional intelligence</strong>, <strong>moral psychology</strong>, and <strong>social behavior</strong>.
+      This website hosts your <strong>psychology lessons, research notes, and learning materials</strong>.  
+      All text automatically adapts to the reader’s language through the 
+      <em>Judou Sans</em> type system.
     </p>
+  </section>
 
-    <h3>Available Lessons</h3>
+  <section class="card">
+    <h2>Language Demonstration</h2>
+    <p lang="en">English text — half-width punctuation active.</p>
+    <p lang="es">Texto en español — también usa “halt”.</p>
+    <p lang="zh-Hans">简体中文文本 —— 使用标准宽度。</p>
+    <p lang="zh-Hant">繁體中文文字 —— 使用標準寬度。</p>
+    <p lang="ja">日本語の文章です。標準の横幅を使用します。</p>
+    <p lang="ko">한국어 문장입니다. 표준 폭을 사용합니다.</p>
+  </section>
+
+  <section class="card">
+    <h2>Lessons</h2>
     <ul>
-      <li><a href="lesson-1.html">Lesson 1 — Foundations of Emotional Literacy</a></li>
+      <li><a href="lessons/lesson1.html">Lesson 1 — 心理学术语教学</a></li>
     </ul>
+  </section>
 
-    <p>More lessons will be added regularly.</p>
-  </div>
+  <section class="card">
+    <h2>Philosophy of Access</h2>
+    <p>
+      Xin Meta promotes the <strong>Right to Knowledge</strong> — open access to psychology learning
+      resources for everyone, whether academic or independent researchers.
+    </p>
+    <p>
+      You may reuse this content with proper citation (APA or any discipline-standard format).
+      See the license for details.
+    </p>
+  </section>
 
-  <footer>
-    © 2026 Xin Meta 心美塔
-  </footer>
+</main>
+
+<footer>
+  Xin Meta Online — © 2026 — Right to Knowledge  
+</footer>
 
 </body>
 </html>
