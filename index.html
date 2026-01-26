@@ -8,6 +8,30 @@
 </head>
 
 <body>
+  body {
+  font-family: 'JudouSansHans', sans-serif;
+  font-feature-settings: "halt" 1;
+}
+
+:lang(zh-Hans) {
+  font-family: 'JudouSansHans';
+  font-feature-settings: "halt" 0;
+}
+
+:lang(zh-Hant) {
+  font-family: 'JudouSansHant';
+  font-feature-settings: "halt" 0;
+}
+
+:lang(ja) {
+  font-family: 'JudouSansJpan';
+  font-feature-settings: "halt" 0;
+}
+
+:lang(ko) {
+  font-family: 'JudouSansKore';
+  font-feature-settings: "halt" 1;
+}
 
 <header class="banner">
   <h1>Xin Meta Online</h1>
