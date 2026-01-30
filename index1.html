@@ -1,298 +1,215 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Xin Meta Online</title>
+<title>Xin Meta — Psychology Knowledge</title>
 
 <style>
-/* ============================
-   FONTS FROM YOUR GITHUB REPO
-============================ */
 
-@font-face {
-  font-family: "JudouSansHans";
-  src: url("https://the-inquirer.github.io/xinmeta.github.io/fonts/JudouSans-Hans.woff2")
-    format("woff2");
-}
-
-@font-face {
-  font-family: "JudouSansHant";
-  src: url("https://the-inquirer.github.io/xinmeta.github.io/fonts/JudouSans-Hant.woff2")
-    format("woff2");
-}
-
-@font-face {
-  font-family: "JudouSansJpan";
-  src: url("https://the-inquirer.github.io/xinmeta.github.io/fonts/JudouSans-Jpan.woff2")
-    format("woff2");
-}
-
-@font-face {
-  font-family: "JudouSansKore";
-  src: url("https://the-inquirer.github.io/xinmeta.github.io/fonts/JudouSans-Kore.woff2")
-    format("woff2");
-}
-
-@font-face {
-  font-family: "JudouSansLatin";
-  src: url("https://the-inquirer.github.io/xinmeta.github.io/fonts/JudouSansLatin.woff2")
-    format("woff2");
-}
-
-/* ============================
-   THEME COLORS
-============================ */
-
+/* ---------- DARK MODE THEME ---------- */
 :root {
-  --violet: #8764B8;
-  --dark-bg: #121212;
-  --dark-card: #1E1E1E;
-  --dark-text: #ECECEC;
+  --violet: #9070A0;
+  --violet-light: #BFA8CF;
+  --bg: #111;
+  --bg-card: #1a1a1a;
+  --text: #f0f0f0;
+  --text-dim: #c9c9c9;
+  --border: #2a2a2a;
 }
-
-/* dark mode (default) */
-[data-theme="dark"] {
-  --bg: var(--dark-bg);
-  --card: var(--dark-card);
-  --text: var(--dark-text);
-}
-
-/* ============================
-   PAGE BASE
-============================ */
 
 body {
-  margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: "JudouSansLatin", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'JudouSansHans', sans-serif;
+  font-feature-settings: "halt" 1; /* default */
+}
+
+a {
+  color: var(--violet-light);
 }
 
 header.banner {
-  padding: 2rem;
-  background: var(--violet);
-  color: white;
-}
-
-.topnav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.controls {
-  display: flex;
-  gap: 1rem;
-}
-
-main {
-  padding: 1rem;
+  padding: 40px 20px;
+  background: #181818;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
 }
 
 .card {
-  background: var(--card);
-  padding: 1.5rem;
+  background: var(--bg-card);
+  margin: 25px;
+  padding: 25px;
   border-radius: 12px;
-  margin: 2rem auto;
-  max-width: 800px;
-}
-
-/* ============================
-   FONT LOGIC BY LANGUAGE
-============================ */
-
-:lang(zh-Hans) { font-family: "JudouSansHans"; }
-:lang(zh-Hant) { font-family: "JudouSansHant"; }
-:lang(ja)      { font-family: "JudouSansJpan"; }
-:lang(ko)      { font-family: "JudouSansKore"; }
-
-/* Latin languages → "halt" */
-:lang(en),
-:lang(es),
-:lang(fr),
-:lang(de),
-:lang(ru),
-:lang(ar) {
-  font-family: "JudouSansLatin", sans-serif;
-  font-feature-settings: "halt" 1;
-}
-
-/* Arabic direction fix */
-:lang(ar) {
-  direction: rtl;
-  text-align: right;
+  border: 1px solid var(--border);
 }
 
 footer {
-  padding: 2rem;
   text-align: center;
-  opacity: 0.8;
+  padding: 40px;
+  color: var(--text-dim);
 }
+
+/* ---------- FONT LOADING ---------- */
+/* LATIN-DEFAULT (Hans) — used for all non-CJK unless overridden */
+
+@font-face {
+  font-family: 'JudouSansHans';
+  font-weight: 400;
+  src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansHans-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'JudouSansHans';
+  font-weight: 700;
+  src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansHans-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'JudouSansHans';
+  font-style: italic;
+  src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansHans-Italic.woff2') format('woff2');
+}
+
+/* ---------- TRADITIONAL CHINESE ---------- */
+@font-face {
+  font-family: 'JudouSansHant';
+  font-weight: 400;
+  src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansHant-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'JudouSansHant';
+  font-weight: 700;
+  src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansHant-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'JudouSansHant';
+  font-style: italic;
+  src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansHant-Italic.woff2') format('woff2');
+}
+
+/* ---------- JAPANESE ---------- */
+@font-face {
+  font-family: 'JudouSansJpan';
+  font-weight: 400;
+  src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansJpan-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'JudouSansJpan';
+  font-weight: 700;
+  src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansJpan-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'JudouSansJpan';
+  font-style: italic;
+  src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansJpan-Italic.woff2') format('woff2');
+}
+
+/* ---------- KOREAN (halt ON) ---------- */
+@font-face {
+  font-family: 'JudouSansKore';
+  font-weight: 400;
+  src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansKore-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'JudouSansKore';
+  font-weight: 700;
+  src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansKore-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'JudouSansKore';
+  font-style: italic;
+  src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansKore-Italic.woff2') format('woff2');
+}
+
+/* ---------- LANGUAGE-BASED AUTO SWITCH ---------- */
+
+/* Simplified Chinese → Hans, halt OFF */
+:lang(zh-Hans) {
+  font-family: 'JudouSansHans';
+  font-feature-settings: "halt" 0;
+}
+
+/* Traditional Chinese → Hant, halt OFF */
+:lang(zh-Hant) {
+  font-family: 'JudouSansHant';
+  font-feature-settings: "halt" 0;
+}
+
+/* Japanese → Jpan, halt OFF */
+:lang(ja) {
+  font-family: 'JudouSansJpan';
+  font-feature-settings: "halt" 0;
+}
+
+/* Korean → Kore, halt ON (your request) */
+:lang(ko) {
+  font-family: 'JudouSansKore';
+  font-feature-settings: "halt" 1;
+}
+
+/* All other languages keep Hans + halt ON */
+:lang(ar),
+:lang(ru),
+:lang(en),
+:lang(fr),
+:lang(es),
+:lang(de) {
+  font-family: 'JudouSansHans';
+  font-feature-settings: "halt" 1;
+}
+
 </style>
 
 </head>
+
 <body>
 
 <header class="banner">
-  <nav class="topnav">
-    <h1>Xin Meta</h1>
-    <div class="controls">
-
-      <!-- THEME SWITCH -->
-      <button id="toggle-theme">🌓</button>
-
-      <!-- LANGUAGE SWITCH -->
-      <select id="lang-switcher">
-        <option value="en">English</option>
-        <option value="es">Español</option>
-        <option value="fr">Français</option>
-        <option value="ru">Русский</option>
-        <option value="ar">العربية</option>
-        <option value="zh">中文</option>
-        <option value="de">Deutsch</option>
-      </select>
-
-    </div>
-  </nav>
-
-  <p class="subtitle" data-i18n="subtitle">
-    Your psychology knowledge center — multilingual, accessible, research-friendly.
-  </p>
+  <h1>Xin Meta Online</h1>
+  <p>The multilingual psychology platform — UN-ready, research-first.</p>
 </header>
 
 <main>
 
 <section class="card">
-  <h2 data-i18n="welcome_title">Welcome</h2>
-  <p data-i18n="welcome_body">
-    This website hosts your psychology lessons, research notes, and learning materials.
-    Text automatically adapts to the reader’s language using Judou Sans.
-  </p>
+<h2>UN Language Demonstration</h2>
+
+<p lang="en"><strong>English:</strong> Knowledge is a universal right.</p>
+<p lang="fr"><strong>Français :</strong> Le savoir est un droit universel.</p>
+<p lang="es"><strong>Español:</strong> El conocimiento es un derecho universal.</p>
+<p lang="ru"><strong>Русский:</strong> Знание — это универсальное право.</p>
+<p lang="zh-Hans"><strong>中文（简体）：</strong> 知识是普遍的权利。</p>
+<p lang="ar"><strong>العربية:</strong> المعرفةُ حقٌّ عالميّ.</p>
+
+<h3>+ German (extra)</h3>
+<p lang="de"><strong>Deutsch:</strong> Wissen ist ein universelles Recht.</p>
 </section>
 
 <section class="card">
-  <h2 data-i18n="demo_title">Language Demonstration</h2>
+<h2>CJK Demonstration</h2>
 
-  <p lang="en">English — half-width punctuation.</p>
-  <p lang="es">Texto en español — puntuación reducida.</p>
-  <p lang="fr">Texte français — ponctuation étroite.</p>
-  <p lang="ru">Русский текст — узкая пунктуация.</p>
-  <p lang="ar">هذا نص عربي — عرض قياسي.</p>
-  <p lang="zh-Hans">简体中文 —— 使用标准宽度。</p>
-  <p lang="de">Deutscher Text — halt aktiviert.</p>
+<p lang="zh-Hans">简体中文示例文本（使用标准宽度）。</p>
+<p lang="zh-Hant">繁體中文示例文本（使用標準寬度）。</p>
+<p lang="ja">これは日本語のサンプルテキストです。</p>
+<p lang="ko">이것은 한국어 샘플 문장입니다. (halt 활성화)</p>
+
 </section>
 
 <section class="card">
-  <h2 data-i18n="access_title">Philosophy of Access</h2>
-  <p data-i18n="access_body1">
-    Xin Meta promotes the Right to Knowledge: open access to psychology resources for all.
-  </p>
-  <p data-i18n="access_body2">
-    You may reuse this content with proper citation (APA or any academic format).
-  </p>
+<h2>About Xin Meta</h2>
+<p>
+Xin Meta is dedicated to low-fluff, high-accuracy psychology education,
+delivered in a multilingual, globally accessible format.  
+All content adapts to the reader’s language instantly.
+</p>
 </section>
 
 </main>
 
 <footer>
-  Xin Meta Online — © 2026 — Right to Knowledge
+Xin Meta — © 2026 — Right to Knowledge
 </footer>
-
-<script>
-/* ============================
-   THEME SWITCHING
-============================ */
-document.getElementById("toggle-theme").onclick = () => {
-  const html = document.documentElement;
-  html.setAttribute("data-theme",
-    html.getAttribute("data-theme") === "dark" ? "light" : "dark"
-  );
-};
-
-/* ============================
-   I18N — UN LANGUAGES + GERMAN
-============================ */
-
-const translations = {
-  en: {
-    subtitle: "Your psychology knowledge center — multilingual, accessible, research-friendly.",
-    welcome_title: "Welcome",
-    welcome_body: "This website hosts your psychology lessons, research notes, and learning materials. Text automatically adapts to the reader’s language using Judou Sans.",
-    demo_title: "Language Demonstration",
-    access_title: "Philosophy of Access",
-    access_body1: "Xin Meta promotes the Right to Knowledge: open access to psychology resources for all.",
-    access_body2: "You may reuse this content with proper citation (APA or any academic format)."
-  },
-
-  es: {
-    subtitle: "Tu centro de psicología — multilingüe, accesible, orientado a la investigación.",
-    welcome_title: "Bienvenido",
-    welcome_body: "Este sitio contiene tus lecciones, notas de investigación y materiales psicológicos.",
-    demo_title: "Demostración lingüística",
-    access_title: "Filosofía del acceso",
-    access_body1: "Xin Meta promueve el Derecho al Conocimiento para todos.",
-    access_body2: "Puedes reutilizar este contenido con la cita apropiada."
-  },
-
-  fr: {
-    subtitle: "Votre centre de psychologie — multilingue, accessible, orienté recherche.",
-    welcome_title: "Bienvenue",
-    welcome_body: "Ce site contient vos leçons et documents psychologiques.",
-    demo_title: "Démonstration linguistique",
-    access_title: "Philosophie d’accès",
-    access_body1: "Xin Meta défend le Droit au Savoir.",
-    access_body2: "Vous pouvez réutiliser ce contenu avec citation appropriée."
-  },
-
-  ru: {
-    subtitle: "Ваш центр психологических знаний — многоязычный и доступный.",
-    welcome_title: "Добро пожаловать",
-    welcome_body: "Этот сайт содержит уроки психологии и материалы.",
-    demo_title: "Демонстрация языков",
-    access_title: "Философия доступа",
-    access_body1: "Xin Meta поддерживает Право на знание.",
-    access_body2: "Вы можете использовать материалы при корректном цитировании."
-  },
-
-  ar: {
-    subtitle: "مركزك للمعرفة النفسية — متعدد اللغات وسهل الوصول.",
-    welcome_title: "مرحبًا",
-    welcome_body: "يحتوي هذا الموقع على دروسك النفسية وموادك البحثية.",
-    demo_title: "عرض اللغات",
-    access_title: "فلسفة الوصول",
-    access_body1: "تدعم Xin Meta الحق في المعرفة.",
-    access_body2: "يمكنك إعادة استخدام المحتوى مع الاستشهاد المناسب."
-  },
-
-  zh: {
-    subtitle: "您的心理学知识中心——多语言、可访问、研究友好。",
-    welcome_title: "欢迎",
-    welcome_body: "本站提供心理学课程、研究笔记和学习材料。",
-    demo_title: "语言演示",
-    access_title: "知识获取理念",
-    access_body1: "Xin Meta 推广“知识权利”。",
-    access_body2: "内容可重复使用（需标准格式引用）。"
-  },
-
-  de: {
-    subtitle: "Dein psychologisches Wissenszentrum — mehrsprachig, zugänglich, forschungsfreundlich.",
-    welcome_title: "Willkommen",
-    welcome_body: "Diese Website enthält deine Psychologielektionen und Materialien.",
-    demo_title: "Sprachdemonstration",
-    access_title: "Zugangsethik",
-    access_body1: "Xin Meta unterstützt das Recht auf Wissen.",
-    access_body2: "Du darfst Inhalte wiederverwenden, solange du korrekt zitierst."
-  }
-};
-
-document.getElementById("lang-switcher").onchange = function () {
-  const lang = this.value;
-  document.querySelectorAll("[data-i18n]").forEach((el) => {
-    el.textContent = translations[lang][el.dataset.i18n];
-  });
-};
-</script>
 
 </body>
 </html>
