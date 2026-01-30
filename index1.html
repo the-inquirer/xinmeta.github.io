@@ -6,121 +6,172 @@
 <title>Xin Meta Online</title>
 
 <style>
-/* ===== Fonts ===== */
+/* ===== Font Faces ===== */
 @font-face {
   font-family: 'JudouSansHans';
-  src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansHans-Regular.woff2') format('woff2');
-  font-weight: normal; font-style: normal;
+  src: url('https://the-inquirer.github.io/xinmeta.github.io/fonts/JudouSansHans-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
-@font-face { font-family: 'JudouSansHans'; src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansHans-Bold.woff2') format('woff2'); font-weight: bold; font-style: normal;}
-@font-face { font-family: 'JudouSansHans'; src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansHans-Italic.woff2') format('woff2'); font-weight: normal; font-style: italic;}
+@font-face {
+  font-family: 'JudouSansHans';
+  src: url('https://the-inquirer.github.io/xinmeta.github.io/fonts/JudouSansHans-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'JudouSansHans';
+  src: url('https://the-inquirer.github.io/xinmeta.github.io/fonts/JudouSansHans-Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
 
-@font-face { font-family: 'JudouSansHant'; src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansHant-Regular.woff2') format('woff2'); font-weight: normal; font-style: normal;}
-@font-face { font-family: 'JudouSansHant'; src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansHant-Bold.woff2') format('woff2'); font-weight: bold; font-style: normal;}
-@font-face { font-family: 'JudouSansHant'; src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansHant-Italic.woff2') format('woff2'); font-weight: normal; font-style: italic;}
+@font-face {
+  font-family: 'JudouSansHant';
+  src: url('https://the-inquirer.github.io/xinmeta.github.io/fonts/JudouSansHant-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'JudouSansHant';
+  src: url('https://the-inquirer.github.io/xinmeta.github.io/fonts/JudouSansHant-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'JudouSansHant';
+  src: url('https://the-inquirer.github.io/xinmeta.github.io/fonts/JudouSansHant-Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
 
-@font-face { font-family: 'JudouSansJpan'; src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansJpan-Regular.woff2') format('woff2'); font-weight: normal; font-style: normal;}
-@font-face { font-family: 'JudouSansJpan'; src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansJpan-Bold.woff2') format('woff2'); font-weight: bold; font-style: normal;}
-@font-face { font-family: 'JudouSansJpan'; src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansJpan-Italic.woff2') format('woff2'); font-weight: normal; font-style: italic;}
+@font-face {
+  font-family: 'JudouSansJpan';
+  src: url('https://the-inquirer.github.io/xinmeta.github.io/fonts/JudouSansJpan-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'JudouSansJpan';
+  src: url('https://the-inquirer.github.io/xinmeta.github.io/fonts/JudouSansJpan-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'JudouSansJpan';
+  src: url('https://the-inquirer.github.io/xinmeta.github.io/fonts/JudouSansJpan-Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
 
-@font-face { font-family: 'JudouSansKore'; src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansKore-Regular.woff2') format('woff2'); font-weight: normal; font-style: normal;}
-@font-face { font-family: 'JudouSansKore'; src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansKore-Bold.woff2') format('woff2'); font-weight: bold; font-style: normal;}
-@font-face { font-family: 'JudouSansKore'; src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansKore-Italic.woff2') format('woff2'); font-weight: normal; font-style: italic;}
+@font-face {
+  font-family: 'JudouSansKore';
+  src: url('https://the-inquirer.github.io/xinmeta.github.io/fonts/JudouSansKore-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'JudouSansKore';
+  src: url('https://the-inquirer.github.io/xinmeta.github.io/fonts/JudouSansKore-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'JudouSansKore';
+  src: url('https://the-inquirer.github.io/xinmeta.github.io/fonts/JudouSansKore-Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
 
-/* ===== Base Styles ===== */
+/* ===== Global Styles ===== */
 :root {
   --primary: #9070A0;
   --accent: #16417C;
-  --bg-light: #f5f5f5;
-  --bg-dark: #121212;
-  --text-light: #111;
-  --text-dark: #eee;
+  --background: #121212;
+  --foreground: #F0F0F0;
+  --card-bg: #1E1E2E;
+}
+
+[data-theme="light"] {
+  --background: #F0F0F0;
+  --foreground: #121212;
+  --card-bg: #FFFFFF;
 }
 
 body {
-  margin:0; padding:0;
+  margin:0;
   font-family: 'JudouSansHans', sans-serif;
-  background-color: var(--bg-light);
-  color: var(--text-light);
-  transition: background-color 0.3s, color 0.3s;
+  background: var(--background);
+  color: var(--foreground);
+  transition: background 0.3s, color 0.3s;
 }
 
-header, footer {
+header.banner {
+  background: var(--primary);
+  color: var(--foreground);
+  padding: 1rem;
   text-align: center;
+}
+
+header.banner h1 { margin:0; }
+
+main { padding:1rem; }
+
+.card {
+  background: var(--card-bg);
+  margin: 1rem 0;
   padding: 1rem;
-  background-color: var(--primary);
-  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
 }
 
-main {
+a { color: var(--accent); text-decoration: none; }
+
+footer {
+  text-align:center;
   padding: 1rem;
-  max-width: 900px;
-  margin: auto;
+  color: var(--foreground);
 }
 
-section.card {
-  background-color: #fff;
-  border-left: 4px solid var(--accent);
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 6px;
-  transition: background-color 0.3s;
+/* ===== Language Font Switching ===== */
+p:lang(zh-Hans), html:lang(zh-Hans) { font-family: 'JudouSansHans', sans-serif; }
+p:lang(zh-Hant), html:lang(zh-Hant) { font-family: 'JudouSansHant', sans-serif; }
+p:lang(ja), html:lang(ja) { font-family: 'JudouSansJpan', sans-serif; }
+p:lang(ko), html:lang(ko) { font-family: 'JudouSansKore', sans-serif; }
+
+/* ===== OpenType halt for non-CJK except SK/Hant/Jpan ===== */
+p:lang(en), p:lang(fr), p:lang(es), p:lang(ar), p:lang(ru) {
+  font-feature-settings: "halt" 1;
 }
 
-/* Dark mode */
-body.dark-mode {
-  background-color: var(--bg-dark);
-  color: var(--text-dark);
+/* ===== Buttons ===== */
+button { 
+  padding:0.5rem 1rem; 
+  border:none; 
+  border-radius:5px;
+  cursor:pointer;
+  margin:0.2rem;
 }
-body.dark-mode section.card {
-  background-color: #1e1e2f;
-}
-
-/* Language Font Switch */
-p:lang(zh-Hans),
-p:lang(en), p:lang(fr), p:lang(de), p:lang(ar), p:lang(ru), p:lang(es) {
-  font-family: 'JudouSansHans', sans-serif;
-  font-variant-east-asian: none;
-}
-p:lang(zh-Hant) { font-family: 'JudouSansHant', sans-serif; }
-p:lang(ja) { font-family: 'JudouSansJpan', sans-serif; }
-p:lang(ko) { font-family: 'JudouSansKore', sans-serif; font-variant-east-asian: full-width; }
-
-/* Buttons */
-button {
-  padding: 0.5rem 1rem;
-  margin: 0.5rem;
-  background-color: var(--accent);
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-button:hover { opacity: 0.85; }
-select { padding: 0.4rem; margin:0.5rem; border-radius: 4px; }
-
-/* Hide all language sections initially */
-.lang-section { display:none; }
-.lang-section.active { display:block; }
-
+button:hover { opacity:0.8; }
+#themeToggle { background: var(--accent); color: #fff; }
+#langSelect { background: var(--primary); color: #fff; }
 </style>
 </head>
+
 <body>
 
-<header>
+<header class="banner">
   <h1>Xin Meta Online</h1>
-  <p>Multilingual Psychology Knowledge Center</p>
   <div>
-    <button onclick="toggleMode()">Toggle Light/Dark</button>
-    <select id="langSelect" onchange="changeLang()">
+    <button id="themeToggle">Toggle Theme</button>
+    <select id="langSelect">
       <option value="en">English</option>
       <option value="fr">Français</option>
       <option value="es">Español</option>
       <option value="ar">العربية</option>
       <option value="ru">Русский</option>
-      <option value="de">Deutsch</option>
-      <option value="zh-Hans">简体中文</option>
-      <option value="zh-Hant">繁體中文</option>
+      <option value="zh-Hans">中文 (简体)</option>
+      <option value="zh-Hant">中文 (繁體)</option>
       <option value="ja">日本語</option>
       <option value="ko">한국어</option>
     </select>
@@ -128,71 +179,39 @@ select { padding: 0.4rem; margin:0.5rem; border-radius: 4px; }
 </header>
 
 <main>
-  <section class="card lang-section active" data-lang="en">
+  <section class="card">
     <h2>Welcome</h2>
-    <p>This website hosts your psychology lessons, research notes, and learning materials.</p>
-  </section>
-
-  <section class="card lang-section" data-lang="fr">
-    <h2>Bienvenue</h2>
-    <p>Ce site héberge vos cours de psychologie, vos notes de recherche et vos supports pédagogiques.</p>
-  </section>
-
-  <section class="card lang-section" data-lang="es">
-    <h2>Bienvenido</h2>
-    <p>Este sitio web aloja tus lecciones de psicología, notas de investigación y materiales de aprendizaje.</p>
-  </section>
-
-  <section class="card lang-section" data-lang="ar">
-    <h2>مرحبًا</h2>
-    <p>يستضيف هذا الموقع دروسك في علم النفس وملاحظات البحث ومواد التعلم الخاصة بك.</p>
-  </section>
-
-  <section class="card lang-section" data-lang="ru">
-    <h2>Добро пожаловать</h2>
-    <p>Этот сайт содержит ваши уроки психологии, исследовательские заметки и учебные материалы.</p>
-  </section>
-
-  <section class="card lang-section" data-lang="de">
-    <h2>Willkommen</h2>
-    <p>Diese Website enthält Ihre Psychologie-Lektionen, Forschungsnotizen und Lernmaterialien.</p>
-  </section>
-
-  <section class="card lang-section" data-lang="zh-Hans">
-    <h2>欢迎</h2>
-    <p>简体中文文本 —— 使用 Judou Sans Hans。</p>
-  </section>
-
-  <section class="card lang-section" data-lang="zh-Hant">
-    <h2>歡迎</h2>
-    <p>繁體中文文本 —— 使用 Judou Sans Hant。</p>
-  </section>
-
-  <section class="card lang-section" data-lang="ja">
-    <h2>ようこそ</h2>
-    <p>日本語の文章です —— 使用 Judou Sans Jpan。</p>
-  </section>
-
-  <section class="card lang-section" data-lang="ko">
-    <h2>환영합니다</h2>
-    <p>한국어 문장입니다 —— 使用 Judou Sans Kore。</p>
+    <p lang="en">English text with Judou Sans.</p>
+    <p lang="fr">Texte en français avec Judou Sans.</p>
+    <p lang="es">Texto en español con Judou Sans.</p>
+    <p lang="ar">النص العربي باستخدام Judou Sans.</p>
+    <p lang="ru">Русский текст с использованием Judou Sans.</p>
+    <p lang="zh-Hans">简体中文文本使用 Judou Sans.</p>
+    <p lang="zh-Hant">繁體中文文本使用 Judou Sans.</p>
+    <p lang="ja">日本語の文章は Judou Sans です。</p>
+    <p lang="ko">한국어 문장은 Judou Sans입니다.</p>
   </section>
 </main>
 
 <footer>
-  Xin Meta Online — © 2026
+  Xin Meta Online — © 2026 — Right to Knowledge
 </footer>
 
 <script>
-function toggleMode() {
-  document.body.classList.toggle('dark-mode');
-}
-function changeLang() {
-  const lang = document.getElementById('langSelect').value;
-  document.querySelectorAll('.lang-section').forEach(s => {
-    s.classList.toggle('active', s.dataset.lang === lang);
-  });
-}
+const themeToggle = document.getElementById('themeToggle');
+themeToggle.addEventListener('click', ()=>{
+  const html = document.documentElement;
+  if(html.dataset.theme === 'light') {
+    html.dataset.theme = 'dark';
+  } else {
+    html.dataset.theme = 'light';
+  }
+});
+
+const langSelect = document.getElementById('langSelect');
+langSelect.addEventListener('change', ()=>{
+  document.documentElement.lang = langSelect.value;
+});
 </script>
 
 </body>
