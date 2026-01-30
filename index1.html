@@ -6,11 +6,7 @@
 <title>Xin Meta Online</title>
 
 <style>
-/* ====================== */
-/*       FONTS            */
-/* ====================== */
-
-/* Judou Sans Hans */
+/* ===== Fonts ===== */
 @font-face {
   font-family: 'JudouSansHans';
   src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansHans-Regular.woff2') format('woff2');
@@ -27,7 +23,6 @@
   font-weight: normal; font-style: italic;
 }
 
-/* Judou Sans Hant */
 @font-face {
   font-family: 'JudouSansHant';
   src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansHant-Regular.woff2') format('woff2');
@@ -44,7 +39,6 @@
   font-weight: normal; font-style: italic;
 }
 
-/* Judou Sans Jpan */
 @font-face {
   font-family: 'JudouSansJpan';
   src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansJpan-Regular.woff2') format('woff2');
@@ -61,7 +55,6 @@
   font-weight: normal; font-style: italic;
 }
 
-/* Judou Sans Kore */
 @font-face {
   font-family: 'JudouSansKore';
   src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansKore-Regular.woff2') format('woff2');
@@ -78,178 +71,130 @@
   font-weight: normal; font-style: italic;
 }
 
-/* ====================== */
-/*      RESET / BASE      */
-/* ====================== */
-* { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior:smooth; }
+/* ===== Base Styles ===== */
+:root {
+  --primary: #9070A0;
+  --accent: #16417C;
+  --bg-light: #f5f5f5;
+  --bg-dark: #121212;
+  --text-light: #111;
+  --text-dark: #eee;
+}
+
 body {
+  margin:0; padding:0;
   font-family: 'JudouSansHans', sans-serif;
-  background-color:#1A1A1A;
-  color:#F0F0F0;
-  line-height:1.6;
-  transition: all 0.3s ease;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background-color 0.3s, color 0.3s;
 }
-h1,h2,h3,h4,h5,h6 { font-weight:bold; }
-a { color:#16417C; text-decoration:none; transition: color 0.2s; }
-a:hover { color:#9070A0; }
 
-/* ====================== */
-/*      LAYOUT            */
-/* ====================== */
-header.banner {
-  background:#9070A0;
-  color:white;
-  padding:1rem 2rem;
-  text-align:center;
+header, footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--primary);
+  color: #fff;
 }
-header.banner h1 { margin-bottom:0.5rem; }
-main { padding:2rem; max-width:1000px; margin:0 auto; }
+
+main {
+  padding: 1rem;
+  max-width: 800px;
+  margin: auto;
+}
+
 section.card {
-  background:#2A2A2A;
-  padding:1.5rem;
-  margin-bottom:1.5rem;
-  border-radius:8px;
-  box-shadow:0 2px 6px rgba(0,0,0,0.5);
-}
-footer {
-  text-align:center;
-  padding:1rem;
-  background:#16417C;
-  color:white;
+  background-color: #fff;
+  border-left: 4px solid var(--accent);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s;
 }
 
-/* ====================== */
-/* DARK/LIGHT TOGGLE      */
-/* ====================== */
-.toggle-btn {
-  position:fixed;
-  top:1rem;
-  right:1rem;
-  background:#9070A0;
-  color:white;
-  padding:0.5rem 1rem;
-  border:none;
-  border-radius:5px;
-  cursor:pointer;
-  z-index:100;
+/* Dark mode */
+body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
 }
-body.light-mode { background:#F0F0F0; color:#1A1A1A; }
-body.light-mode section.card { background:#FFFFFF; box-shadow:0 2px 6px rgba(0,0,0,0.2); }
-body.light-mode header.banner { background:#9070A0; color:white; }
-body.light-mode a { color:#16417C; }
-body.light-mode footer { background:#16417C; color:white; }
-
-/* ====================== */
-/* LANGUAGE SELECTOR      */
-/* ====================== */
-#lang-select {
-  position:fixed;
-  top:1rem;
-  left:1rem;
-  padding:0.5rem;
-  border-radius:5px;
-  border:none;
-  background:#9070A0;
-  color:white;
-  cursor:pointer;
-  z-index:100;
+body.dark-mode section.card {
+  background-color: #1e1e2f;
 }
 
-/* ====================== */
-/* FONT SWITCHING         */
-/* ====================== */
-p, span, li, div {
+/* ===== Language Font Switch ===== */
+p:lang(zh-Hans), p:lang(en), p:lang(de), p:lang(fr), p:lang(ar), p:lang(ru), p:lang(es), p:lang(zh-Hans), p:lang(es) {
   font-family: 'JudouSansHans', sans-serif;
 }
-p[lang="zh-Hant"], li[lang="zh-Hant"], span[lang="zh-Hant"], div[lang="zh-Hant"] {
-  font-family: 'JudouSansHant', sans-serif;
+p:lang(zh-Hant) { font-family: 'JudouSansHant', sans-serif; }
+p:lang(ja) { font-family: 'JudouSansJpan', sans-serif; }
+p:lang(ko) { font-family: 'JudouSansKore', sans-serif; font-variant-east-asian: full-width; }
+
+/* ===== Buttons ===== */
+button {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  background-color: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
-p[lang="ja"], li[lang="ja"], span[lang="ja"], div[lang="ja"] {
-  font-family: 'JudouSansJpan', sans-serif;
-}
-p[lang="ko"], li[lang="ko"], span[lang="ko"], div[lang="ko"] {
-  font-family: 'JudouSansKore', sans-serif;
-  font-variant-east-asian: full-width; /* enforce halt */
+button:hover {
+  opacity: 0.85;
 }
 
-/* ====================== */
-/* ADDITIONAL STYLES      */
-/* ====================== */
-select { font-family:'JudouSansHans', sans-serif; font-size:1rem; }
 </style>
-
 </head>
 <body>
 
-<button class="toggle-btn" onclick="toggleMode()">Toggle Light/Dark</button>
-<select id="lang-select" onchange="switchLanguage(this.value)">
-  <option value="en" selected>English</option>
-  <option value="fr">French</option>
-  <option value="es">Spanish</option>
-  <option value="ru">Russian</option>
-  <option value="ar">Arabic</option>
-  <option value="zh-Hans">Simplified Chinese</option>
-  <option value="zh-Hant">Traditional Chinese</option>
-  <option value="ja">Japanese</option>
-  <option value="ko">Korean</option>
-  <option value="de">German</option>
-</select>
-
-<header class="banner">
+<header>
   <h1>Xin Meta Online</h1>
-  <p>Your psychology knowledge center — multilingual, accessible, research-friendly.</p>
+  <p>Multilingual Psychology Knowledge Center</p>
+  <div>
+    <button onclick="toggleMode()">Toggle Light/Dark</button>
+    <select id="langSelect" onchange="changeLang()">
+      <option value="en">English</option>
+      <option value="fr">French</option>
+      <option value="es">Spanish</option>
+      <option value="ar">Arabic</option>
+      <option value="ru">Russian</option>
+      <option value="de">German</option>
+    </select>
+  </div>
 </header>
 
 <main>
   <section class="card">
     <h2>Welcome</h2>
     <p lang="en">This website hosts your psychology lessons, research notes, and learning materials.</p>
-    <p lang="fr">Ce site héberge vos cours de psychologie, vos notes de recherche et vos ressources pédagogiques.</p>
-    <p lang="es">Este sitio aloja tus lecciones de psicología, notas de investigación y materiales de aprendizaje.</p>
-    <p lang="de">Diese Website enthält Ihre Psychologielektionen, Forschungsnotizen und Lernmaterialien.</p>
+    <p lang="fr">Ce site héberge vos cours de psychologie, vos notes de recherche et vos supports pédagogiques.</p>
+    <p lang="es">Este sitio web aloja tus lecciones de psicología, notas de investigación y materiales de aprendizaje.</p>
+    <p lang="ar">يستضيف هذا الموقع دروسك في علم النفس وملاحظات البحث ومواد التعلم الخاصة بك.</p>
     <p lang="ru">Этот сайт содержит ваши уроки психологии, исследовательские заметки и учебные материалы.</p>
-    <p lang="ar">يستضيف هذا الموقع دروسك في علم النفس والملاحظات البحثية ومواد التعلم.</p>
-    <p lang="zh-Hans">本网站提供心理学课程、研究笔记和学习资料。</p>
-    <p lang="zh-Hant">本網站提供心理學課程、研究筆記和學習資料。</p>
-    <p lang="ja">このウェブサイトでは、心理学の授業、研究ノート、学習資料を提供します。</p>
-    <p lang="ko">이 웹사이트는 심리학 수업, 연구 노트 및 학습 자료를 제공합니다.</p>
+    <p lang="de">Diese Website enthält Ihre Psychologie-Lektionen, Forschungsnotizen und Lernmaterialien.</p>
+  </section>
+
+  <section class="card">
+    <h2>Language Demonstration</h2>
+    <p lang="zh-Hans">简体中文文本 —— 使用 Judou Sans Hans。</p>
+    <p lang="zh-Hant">繁體中文文本 —— 使用 Judou Sans Hant。</p>
+    <p lang="ja">日本語の文章です —— 使用 Judou Sans Jpan。</p>
+    <p lang="ko">한국어 문장입니다 —— 使用 Judou Sans Kore。</p>
   </section>
 </main>
 
 <footer>
-  Xin Meta Online — © 2026 — Right to Knowledge
+  Xin Meta Online — © 2026
 </footer>
 
 <script>
-/* ====================== */
-/* DARK/LIGHT MODE TOGGLE */
-/* ====================== */
 function toggleMode() {
-  document.body.classList.toggle('light-mode');
+  document.body.classList.toggle('dark-mode');
 }
 
-/* ====================== */
-/* LANGUAGE SWITCHER      */
-/* ====================== */
-function switchLanguage(lang) {
+function changeLang() {
+  const lang = document.getElementById('langSelect').value;
   document.documentElement.lang = lang;
-  if(lang === 'ar') {
-    document.body.dir = 'rtl';
-  } else {
-    document.body.dir = 'ltr';
-  }
-
-  // hide/show only selected language
-  const paragraphs = document.querySelectorAll('main p');
-  paragraphs.forEach(p => {
-    if(p.lang === lang) p.style.display = 'block';
-    else p.style.display = 'none';
-  });
 }
-
-// initialize display
-switchLanguage('en');
 </script>
 
 </body>
