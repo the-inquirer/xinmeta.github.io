@@ -9,68 +9,68 @@
    FONT IMPORTS — JUDOU SANS (HANS, HANT, JPAN, KORE)
 ---------------------------------------------------------------- */
 @font-face {
-  font-family: 'JudouHans';
+  font-family: 'JudouSansHans';
   src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansHans-Regular.woff2') format('woff2');
   font-weight: 400;
 }
 @font-face {
-  font-family: 'JudouHans';
+  font-family: 'JudouSansHans';
   src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansHans-Bold.woff2') format('woff2');
   font-weight: 700;
 }
 @font-face {
-  font-family: 'JudouHans';
+  font-family: 'JudouSansHans';
   src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansHans-Italic.woff2') format('woff2');
   font-style: italic;
 }
 
 /* Traditional Chinese */
 @font-face {
-  font-family: 'JudouHant';
+  font-family: 'JudouSansHant';
   src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansHant-Regular.woff2') format('woff2');
   font-weight: 400;
 }
 @font-face {
-  font-family: 'JudouHant';
+  font-family: 'JudouSansHant';
   src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansHant-Bold.woff2') format('woff2');
   font-weight: 700;
 }
 @font-face {
-  font-family: 'JudouHant';
+  font-family: 'JudouSansHant';
   src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansHant-Italic.woff2') format('woff2');
   font-style: italic;
 }
 
 /* Japanese */
 @font-face {
-  font-family: 'JudouJpan';
+  font-family: 'JudouSansJpan';
   src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansJpan-Regular.woff2') format('woff2');
   font-weight: 400;
 }
 @font-face {
-  font-family: 'JudouJpan';
+  font-family: 'JudouSansJpan';
   src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansJpan-Bold.woff2') format('woff2');
   font-weight: 700;
 }
 @font-face {
-  font-family: 'JudouJpan';
+  font-family: 'JudouSansJpan';
   src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansJpan-Italic.woff2') format('woff2');
   font-style: italic;
 }
 
 /* Korean (with halt enabled — your request) */
 @font-face {
-  font-family: 'JudouKore';
+  font-family: 'JudouSansKore';
   src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansKore-Regular.woff2') format('woff2');
   font-weight: 400;
 }
 @font-face {
-  font-family: 'JudouKore';
+  font-family: 'JudouSansKore';
   src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansKore-Bold.woff2') format('woff2');
   font-weight: 700;
 }
 @font-face {
-  font-family: 'JudouKore';
+  font-family: 'JudouSansKore';
   src: url('https://raw.githubusercontent.com/the-inquirer/xinmeta.github.io/main/fonts/JudouSansKore-Italic.woff2') format('woff2');
   font-style: italic;
 }
@@ -99,7 +99,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'JudouHans', sans-serif;
+  font-family: 'JudouSansHans', sans-serif;
   background: var(--bg);
   color: var(--text);
   transition: background 0.3s, color 0.3s;
@@ -129,12 +129,12 @@ main {
 /* -------------------------------------------------------------
    FONT SWITCHING PER LANGUAGE
 ---------------------------------------------------------------- */
-:lang(zh-Hans) { font-family: 'JudouHans'; font-feature-settings: "halt" 0; }
-:lang(zh-Hant) { font-family: 'JudouHant'; font-feature-settings: "halt" 0; }
-:lang(ja)      { font-family: 'JudouJpan'; font-feature-settings: "halt" 0; }
-:lang(ko)      { font-family: 'JudouKore'; font-feature-settings: "halt" 1; } /* your request */
+:lang(zh-Hans) { font-family: 'JudouSansHans'; font-feature-settings: "halt" 0; }
+:lang(zh-Hant) { font-family: 'JudouSansHant'; font-feature-settings: "halt" 0; }
+:lang(ja)      { font-family: 'JudouSansJpan'; font-feature-settings: "halt" 0; }
+:lang(ko)      { font-family: 'JudouSansKore'; font-feature-settings: "halt" 1; } /* your request */
 :lang(en), :lang(es), :lang(fr), :lang(de), :lang(ru), :lang(ar) {
-  font-family: 'JudouHans'; 
+  font-family: 'JudouSansHans'; 
   font-feature-settings: "halt" 1;
 }
 
